@@ -27,7 +27,7 @@ body {
 }
 
 .fa-github-alt {
-    color: #f86d58;
+    color: #f4533a;
 }
 
 img {
@@ -80,7 +80,7 @@ h1 {
 h3 {
     width: 100%;
     text-align: center;
-    color: #f86d58;
+    color: #f4533a;
 }
 
 ul {
@@ -173,7 +173,7 @@ section.repo-data {
 .repo-list li {
     width: 90%;
     margin: 1em 0;
-    border: 1px solid #f86d58;
+    border: 1px solid #f4533a;
     padding: 0.5em;
 }
 
