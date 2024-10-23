@@ -50,7 +50,7 @@ const showRepos = async function () {
     //console.log(repoData);
     displayRepos(repoData);
 };
-showRepos();
+//showRepos();  this created doubles of all my repos, yay found it!!
 
 ///// Lets see those repos displayed ////
 const displayRepos = function (repos) {
@@ -77,12 +77,12 @@ reposList.addEventListener("click", function(e){
 const specificRepoInfo = async function (repoName) {
     const oneRepo = await fetch (`https://api.github.com/repos/${username}/${repoName}`);
     const repoInfo = await oneRepo.json();
-    console.log(repoInfo);
+    //console.log(repoInfo);  trying to find the doubling situation, no change here
 
     // Grab languages
     const fetchLanguages = await fetch(repoInfo.languages_url);
     const languageData = await fetchLanguages.json();
-    console.log(languageData);
+    //console.log(languageData); Let's see here,no changes again
 
     /// Make a list of languages 
     const languages = [];
@@ -90,7 +90,7 @@ const specificRepoInfo = async function (repoName) {
             //console.log(key);
             languages.push(key);  
         }
-        displayRepoInfo(repoInfo,languages);
+        displayRepoInfo(repoInfo,languages); 
 };
 
 /////  Display specific repo info  ////
